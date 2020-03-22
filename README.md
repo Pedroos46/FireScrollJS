@@ -44,6 +44,6 @@ check examples
 FireSrollJS needs the scroll event to be able to detect.
 
     document.onwheel = (e) => {  
-      FireScroll.isTrackPad(e);  
+      fireScroll.isTrackPad(e);  
     };
 

@@ -18,7 +18,7 @@
  * */
 
 
-(function (window, document) {
+(function (window) {
     function TM_DetecionOnScroll() {
         var _TM_DetecionOnScroll = {};
 
@@ -114,8 +114,8 @@
     }
 
     // Library is globally accesible
-    if (typeof (window.TM_detection) === 'undefined') {
-        window.TM_detection = TM_DetecionOnScroll();
+    if (typeof (window.fireScroll) === 'undefined') {
+        window.fireScroll = TM_DetecionOnScroll();
     }
 
-})(window, document);
+})(window);
