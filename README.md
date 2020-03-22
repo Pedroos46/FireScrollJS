@@ -11,7 +11,6 @@ demo aqui.
 ## Support:
 
 ### API Support: 
-Works only with the standarized ECMAScript 6 APIs.
 
 | API |  |
 |--|--|
