@@ -1,16 +1,14 @@
-#  
+# FireScrollJS
 
-ScrollGlassJS is a 2KB vanilla JavaScript library that enables 
 
-drag and drop functionality with zero dependencies. 
+FireScrollJS is a 2 KB vanilla JavaScript library that allows detecting from which devices the user scrolls. Can detect **mouse** or **trackpad** when scrolling, on any HTML tag. 
 
-By implementing this library, you will know by event the device the user is using. 
-
-demo aqui. 
+DEMO.
 
 ## Support:
 
 ### API Support: 
+Works only with the standarized ECMAScript 6 APIs.
 
 | API |  |
 |--|--|
@@ -19,7 +17,7 @@ demo aqui.
 | MouseWheelEvent | ❌ Non-Standard & Deprecated |
 | MouseScrollEvent | ❌ Non-Standard & Deprecated |
 | onmousewheel Event | ❌ Non-Standard |
-| onscroll | ❌ |
+| onsroll | ❌ |
 | DOMMouseScroll | ❌ Non-Standard & Deprecated
 
 
@@ -28,7 +26,7 @@ check examples
 |Browser|  |
 |--|--|
 | Chrome | ✅  |
-| Firefox | ❌ |
+| Firefox | ❌ Not yet |
 | Safari | ☢️ |
 | Opera | ☢️ |
 | Edge | ✅ |
