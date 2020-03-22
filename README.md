@@ -1,7 +1,8 @@
 # FireScrollJS
 
 
-FireScrollJS is a 2 KB vanilla JavaScript library that allows detecting from which devices the user scrolls. Can detect **mouse** or **trackpad** when scrolling, on any HTML tag. 
+FireScrollJS is a 2 KB vanilla JavaScript library that allows you detect from which devices the user is using for scrolling. Can detect **mouse** or **trackpad** when scrolling, on any HTML tag.
+
 
 DEMO.
 
@@ -40,9 +41,9 @@ check examples
 
 ## Usage:
 
-
+FireSrollJS needs the scroll event to be able to detect.
 
     document.onwheel = (e) => {  
-      TM_detection.isTrackPad(e);  
+      FireScroll.isTrackPad(e);  
     };
 
