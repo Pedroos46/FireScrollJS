@@ -19,7 +19,7 @@ demo aqui.
 | MouseWheelEvent | ❌ Non-Standard & Deprecated |
 | MouseScrollEvent | ❌ Non-Standard & Deprecated |
 | onmousewheel Event | ❌ Non-Standard |
-| onsroll | ❌ |
+| onscroll | ❌ |
 | DOMMouseScroll | ❌ Non-Standard & Deprecated
 
 
