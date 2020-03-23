@@ -2,10 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>FireScroll DEMO</title>
+    <meta name="description" content="LA DESCRIPCIO VA AQUI">
+    <meta name="author" content="Roger Pedros Villorbina">
+    <meta name="copyright"
+          content="Copyright (c) 2020, Roger Pedrós Villorbina. Licensed under the Apache License, Version 2.0">
+    <meta name="robots" content="noindex,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FIRESCROLL -->
     <script src="fireScroll.min.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+
+    <!-- code-prettify -->
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+
+    <style>
+        .square {
+            height: 200px;
+            width: 400px;
+        }
+
+        .square-dev {
+            background-color:  lightgrey;
+        }
+
+    </style>
+
 </head>
-<body>
+<body class="bg-light">
+
+
+<nav class="navbar navbar-expand navbar-dark bg-danger navbar-fixed-top border-bottom border-light">
+
+    <a class="navbar-brand d-flex  mr-auto" href="./index.html">FireScrollJS<span class="sr-only">(current)</span></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse w-200">
+        <ul class="navbar-nav ml-auto w-200 justify-content-end">
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/Pedroos46/FireScrollJS">Fork me on <img src=""></a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+<div class="container justify-content-center">
+
+    <div class="row">
+        <!----------------------------------- MENU LATERAL ------------------------------------->
+
+        <div class="col-sm-6 col-md-6 col-lg-6 mt-5 ">
+
+            <div class="square border border-danger rounded d-flex align-items-center justify-content-center" id="squareScroll"><p
+                    class="text-center">Scroll here</p></div>
+
+
+
+            <div class="square border border-danger rounded d-flex align-items-center justify-content-center" id="documentScroll"><p
+                    class="text-center">Scroll here</p></div>
+
+
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6 mt-5">
+
+            <div class="square square-dev border border-dark rounded d-flex align-items-center justify-content-center">
+                <pre class="prettyprint" style="padding: unset !important;border: none !important; "><code class="language-js">    document.onwheel = (e) => {
+        console.log(fireScroll.isTrackPad(e));
+    };</code></pre>
+
+            </div>
+            <div class="square square-dev border border-dark rounded d-flex align-items-center justify-content-center">
+                <pre class="prettyprint" style="padding: unset !important;border: none !important; "><code class="language-js">    document.onwheel = (e) => {
+        console.log(fireScroll.isTrackPad(e));
+    };</code></pre>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<footer id="sticky-footer" class="py-3 bg-light text-black">
+    <div class="container text-center">
+        Copyright (c) 2020, Roger Pedrós Villorbina. Licensed under the Apache License, Version 2.0
+    </div>
+
+</footer>
+
 <script>
+
     document.onwheel = (e) => {
         console.log(fireScroll.isTrackPad(e));
     };
