@@ -77,7 +77,7 @@
         };
 
 
-        _TM_DetecionOnScroll.isTrackPad = (e) => {
+        _TM_DetecionOnScroll.isTrackpad = (e) => {
             main.logic(e);
             if (params.state === TrackpPad) {
                 return true;

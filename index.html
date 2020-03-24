@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FireScroll DEMO</title>
+    <title>FireScrollJS Demo Dage - Roger Pedros</title>
+    <link rel="icon" href="resources/fireicon.png">
+
     <meta name="description" content="LA DESCRIPCIO VA AQUI">
     <meta name="author" content="Roger Pedros Villorbina">
     <meta name="copyright"
@@ -11,7 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- FIRESCROLL -->
-    <script src="fireScroll.min.js"></script>
+    <script src="firescroll.min.js"></script>
+    <script src="resources/fireScroll-implementation.js"></script>
+
 
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -26,26 +30,17 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
 
-    <!-- code-prettify -->
-    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <!-- HIGHLIGHT.js -->
+    <link rel="stylesheet" href="resources/monokai-sublime.css">
+    <script src="resources/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
+    <!-- CUSTOM STYLE-->
+    <link rel="stylesheet" href="resources/style.css">
 
-    <style>
-        .square {
-            height: 200px;
-            width: 400px;
-        }
-
-        .square-dev {
-            background-color:  lightgrey;
-        }
-
-    </style>
 
 </head>
 <body class="bg-light">
-
-
 <nav class="navbar navbar-expand navbar-dark bg-danger navbar-fixed-top border-bottom border-light">
 
     <a class="navbar-brand d-flex  mr-auto" href="./index.html">FireScrollJS<span class="sr-only">(current)</span></a>
@@ -59,8 +54,13 @@
         <ul class="navbar-nav ml-auto w-200 justify-content-end">
 
             <li class="nav-item">
-                <a class="nav-link" href="https://github.com/Pedroos46/FireScrollJS">Fork me on <img src=""></a>
+                <a class="nav-link" href="firescroll.min.js" download="">Download<img src=""></a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/Pedroos46/FireScrollJS">Fork me on Github<img src=""></a>
+            </li>
+
         </ul>
     </div>
 
@@ -68,57 +68,63 @@
 
 <div class="container justify-content-center">
 
+    <!----------------------------------- 1R ROW ------------------------------------->
     <div class="row">
-        <!----------------------------------- MENU LATERAL ------------------------------------->
+        <div class="col-sm-6 col-md-6 col-lg-6 mt-4">
 
-        <div class="col-sm-6 col-md-6 col-lg-6 mt-5 ">
-
-            <div class="square border border-danger rounded d-flex align-items-center justify-content-center" id="squareScroll"><p
-                    class="text-center">Scroll here</p></div>
-
-
-
-            <div class="square border border-danger rounded d-flex align-items-center justify-content-center" id="documentScroll"><p
-                    class="text-center">Scroll here</p></div>
-
-
+            <div class="square border border-danger rounded d-flex align-items-center justify-content-center mx-3 my-5"
+                 id="squareScroll"><p class="text-center">Scroll here</p>
+            </div>
         </div>
-
-        <div class="col-sm-6 col-md-6 col-lg-6 mt-5">
-
-            <div class="square square-dev border border-dark rounded d-flex align-items-center justify-content-center">
-                <pre class="prettyprint" style="padding: unset !important;border: none !important; "><code class="language-js">    document.onwheel = (e) => {
-        console.log(fireScroll.isTrackPad(e));
-    };</code></pre>
-
-            </div>
-            <div class="square square-dev border border-dark rounded d-flex align-items-center justify-content-center">
-                <pre class="prettyprint" style="padding: unset !important;border: none !important; "><code class="language-js">    document.onwheel = (e) => {
-        console.log(fireScroll.isTrackPad(e));
+        <div class="col-sm-6 col-md-6 col-lg-6 mt-4">
+            <div class="square square-dev d-flex align-items-end mx-1 my-5">
+                <pre style="margin-bottom: unset !important; width: 100%"><code
+                        class="border border-dark rounded language-js">    document.onwheel = (e) => {
+        console.log(fireScroll.isTrackpad(e));
     };</code></pre>
             </div>
-
-
         </div>
 
     </div>
+
+
+    <!----------------------------------- 2N ROW ------------------------------------->
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 mt-4">
+
+            <div class="square border border-danger rounded d-flex align-items-center justify-content-center mx-3 my-5">
+                <p class="text-center" id="squareScroll2">Scroll over the document</p>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 mt-4">
+            <div class="square square-dev d-flex align-items-end mx-1 my-5">
+                <pre style="margin-bottom: unset !important; width: 100%"><code
+                        class=" border border-dark rounded language-js">square = document.getElementById("squareScroll2");
+document.onwheel = (e) => {
+    if(fireScroll.isTrackpad(e) === true){
+        square.textContent = "You're using the trackpad👀"
+    }
+    if(fireScroll.isTrackpad(e) === false){
+        square.textContent = "You're using the mouse🐭"
+    }
+    if(fireScroll.isTrackpad(e) === null){
+        square.textContent = "mmmm🤔"
+    }
+};</code></pre>
+            </div>
+        </div>
+
+    </div>
+
 </div>
 
-<footer id="sticky-footer" class="py-3 bg-light text-black">
+
+<footer id="sticky-footer" class="py-2 bg-light text-black fixed-bottom">
     <div class="container text-center">
-        Copyright (c) 2020, Roger Pedrós Villorbina. Licensed under the Apache License, Version 2.0
+        <small>Copyright (c) 2020, Roger Pedrós Villorbina. Licensed under the Apache License, Version 2.0</small>
     </div>
 
 </footer>
-
-<script>
-
-    document.onwheel = (e) => {
-        console.log(fireScroll.isTrackPad(e));
-    };
-
-</script>
-
 
 </body>
 </html>

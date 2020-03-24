@@ -1,0 +1,16 @@
+.square {
+    height: 80%;
+    width: 80%;
+}
+
+.square-dev {
+    width: 100% !important;
+}
+
+@media (max-width: 576px) {
+    .square {
+        height: 80%;
+        width: 100%;
+    }
+}
+
