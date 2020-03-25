@@ -5,15 +5,14 @@
     <title>FireScrollJS Demo Dage - Roger Pedros</title>
     <link rel="icon" href="resources/fireicon.png">
 
-    <meta name="description" content="LA DESCRIPCIO VA AQUI">
+    <meta name="description" content="FireScrollJS is a 2 KB vanilla JavaScript library that allows you to detect which scroll device the user is using when scrolling. Can detect mouse or trackpad when scrolling, on any HTML tag.">
     <meta name="author" content="Roger Pedros Villorbina">
-    <meta name="copyright"
-          content="Copyright (c) 2020, Roger Pedrós Villorbina. Licensed under the Apache License, Version 2.0">
+    <meta name="copyright" content="Copyright (c) 2020, Roger Pedrós Villorbina. Licensed under the Apache License, Version 2.0">
     <meta name="robots" content="noindex,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- FIRESCROLL -->
-    <script src="firescroll.min.js"></script>
+    <script src="firescroll.js"></script>
     <script src="resources/fireScroll-implementation.js"></script>
 
 
@@ -79,17 +78,18 @@
         <div class="col-sm-6 col-md-6 col-lg-6 mt-4">
             <div class="square square-dev d-flex align-items-end mx-1 my-5">
                 <pre style="margin-bottom: unset !important; width: 100%"><code
-                        class="border border-dark rounded language-js">let square = document.getElementById("squareScroll");
+                        class="border border-dark rounded language-js">const square = document.getElementById("squareScroll");
 square.addEventListener("wheel", (e) => {
-     if (fireScroll.isTrackpad(e) === true) {
+    let isTrackpad = fireScroll.isTrackpad(e);
+    if (isTrackpad === true) {
         square.textContent = "You're using the trackpad 👀"
-     }
-     if (fireScroll.isTrackpad(e) === false) {
-         square.textContent = "You're using the mouse 🐭"
-     }
-     if (fireScroll.isTrackpad(e) === null) {
-         square.textContent = "mmmm🤔"
-     }
+    }
+    if (isTrackpad === false) {
+        square.textContent = "You're using the mouse 🐭"
+    }
+    if (isTrackpad === null) {
+        square.textContent = "mmmm🤔"
+    }
 });</code></pre>
             </div>
         </div>
@@ -109,14 +109,15 @@ square.addEventListener("wheel", (e) => {
             <div class="square square-dev d-flex align-items-end mx-1 my-5">
                 <pre style="margin-bottom: unset !important; width: 100%"><code
                         class=" border border-dark rounded language-js">document.onwheel = (e) => {
-    if (fireScroll.isTrackpad(e) === true) {
-         square2.textContent = "You're using the trackpad 👀"
+    let isTrackpad = fireScroll.isTrackpad(e);
+    if (isTrackpad === true) {
+        square2.textContent = "You're using the trackpad 👀"
     }
-    if (fireScroll.isTrackpad(e) === false) {
-         square2.textContent = "You're using the mouse 🐭"
+    if (isTrackpad === false) {
+        square2.textContent = "You're using the mouse 🐭"
     }
-    if (fireScroll.isTrackpad(e) === null) {
-         square2.textContent = "mmmm🤔"
+    if (isTrackpad === null) {
+        square2.textContent = "mmmm🤔"
     }
 };</code></pre>
             </div>

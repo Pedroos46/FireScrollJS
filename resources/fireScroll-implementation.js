@@ -1,31 +1,31 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 
-    let square2 = document.getElementById("squareScroll2");
+    const square2 = document.getElementById("squareScroll2");
     document.onwheel = (e) => {
-        if (fireScroll.isTrackpad(e) === true) {
+        let isTrackpad = fireScroll.isTrackpad(e);
+        if (isTrackpad === true) {
             square2.textContent = "You're using the trackpad 👀"
         }
-        if (fireScroll.isTrackpad(e) === false) {
+        if (isTrackpad === false) {
             square2.textContent = "You're using the mouse 🐭"
         }
-        if (fireScroll.isTrackpad(e) === null) {
+        if (isTrackpad === null) {
             square2.textContent = "mmmm🤔"
         }
-
     };
 
-    let square = document.getElementById("squareScroll");
+    const square = document.getElementById("squareScroll");
     square.addEventListener("wheel", (e) => {
-        if (fireScroll.isTrackpad(e) === true) {
+        let isTrackpad = fireScroll.isTrackpad(e);
+        if (isTrackpad === true) {
             square.textContent = "You're using the trackpad 👀"
         }
-        if (fireScroll.isTrackpad(e) === false) {
+        if (isTrackpad === false) {
             square.textContent = "You're using the mouse 🐭"
         }
-        if (fireScroll.isTrackpad(e) === null) {
+        if (isTrackpad === null) {
             square.textContent = "mmmm🤔"
         }
     });
 });
-
 
