@@ -58,7 +58,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="https://github.com/Pedroos46/FireScrollJS">Fork me on Github<img src=""></a>
+                <a class="nav-link" href="https://github.com/Pedroos46/FireScrollJS">More on Github<img src=""></a>
             </li>
 
         </ul>
@@ -72,16 +72,25 @@
     <div class="row">
         <div class="col-sm-6 col-md-6 col-lg-6 mt-4">
 
-            <div class="square border border-danger rounded d-flex align-items-center justify-content-center mx-3 my-5"
-                 id="squareScroll"><p class="text-center">Scroll here</p>
+            <div class="square border border-danger rounded d-flex align-items-center justify-content-center mx-1 my-5" id="squareScroll">
+                Scroll here
             </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6 mt-4">
             <div class="square square-dev d-flex align-items-end mx-1 my-5">
                 <pre style="margin-bottom: unset !important; width: 100%"><code
-                        class="border border-dark rounded language-js">    document.onwheel = (e) => {
-        console.log(fireScroll.isTrackpad(e));
-    };</code></pre>
+                        class="border border-dark rounded language-js">let square = document.getElementById("squareScroll");
+square.addEventListener("wheel", (e) => {
+     if (fireScroll.isTrackpad(e) === true) {
+        square.textContent = "You're using the trackpad 👀"
+     }
+     if (fireScroll.isTrackpad(e) === false) {
+         square.textContent = "You're using the mouse 🐭"
+     }
+     if (fireScroll.isTrackpad(e) === null) {
+         square.textContent = "mmmm🤔"
+     }
+});</code></pre>
             </div>
         </div>
 
@@ -92,23 +101,22 @@
     <div class="row">
         <div class="col-sm-6 col-md-6 col-lg-6 mt-4">
 
-            <div class="square border border-danger rounded d-flex align-items-center justify-content-center mx-3 my-5">
+            <div class="square border border-danger rounded d-flex align-items-center justify-content-center mx-1 my-5">
                 <p class="text-center" id="squareScroll2">Scroll over the document</p>
             </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6 mt-4">
             <div class="square square-dev d-flex align-items-end mx-1 my-5">
                 <pre style="margin-bottom: unset !important; width: 100%"><code
-                        class=" border border-dark rounded language-js">square = document.getElementById("squareScroll2");
-document.onwheel = (e) => {
-    if(fireScroll.isTrackpad(e) === true){
-        square.textContent = "You're using the trackpad👀"
+                        class=" border border-dark rounded language-js">document.onwheel = (e) => {
+    if (fireScroll.isTrackpad(e) === true) {
+         square2.textContent = "You're using the trackpad 👀"
     }
-    if(fireScroll.isTrackpad(e) === false){
-        square.textContent = "You're using the mouse🐭"
+    if (fireScroll.isTrackpad(e) === false) {
+         square2.textContent = "You're using the mouse 🐭"
     }
-    if(fireScroll.isTrackpad(e) === null){
-        square.textContent = "mmmm🤔"
+    if (fireScroll.isTrackpad(e) === null) {
+         square2.textContent = "mmmm🤔"
     }
 };</code></pre>
             </div>
@@ -119,7 +127,7 @@ document.onwheel = (e) => {
 </div>
 
 
-<footer id="sticky-footer" class="py-2 bg-light text-black fixed-bottom">
+<footer class="footer py-2 bg-light text-black">
     <div class="container text-center">
         <small>Copyright (c) 2020, Roger Pedrós Villorbina. Licensed under the Apache License, Version 2.0</small>
     </div>

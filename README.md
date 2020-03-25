@@ -24,12 +24,12 @@ FireScrollJS is a 2 KB vanilla JavaScript library that allows you to detect whic
 
 |          | Desktop                        | Mobile |
 |----------|--------------------------------|--------|
-| Chrome   | ✅                             |        |
-| Firefox  | ☢️ Deficient support           |        |
-| Safari   | ✅ Not as accurate as Chromium |        |
-| Opera    | ✅                             |        |
-| Edge     | ✅                             |        |
-| Chromium | ✅                             |        |
+| Chrome   | ✅                             |    ❌  |
+| Firefox  | ☢️ Deficient support           |    ❌  |
+| Safari   | ✅ Not as accurate as Chromium |    ❌  |
+| Opera    | ✅                             |    ❌  |
+| Edge     | ✅                             |    ❌  |
+| Chromium | ✅                             |    ❌  |
 
 ## Usage:
 
