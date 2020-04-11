@@ -49,7 +49,7 @@ Can also be used in selected elements.
 |          | Desktop                                  | Mobile |
 |----------|------------------------------------------|--------|
 | Chrome   | ✅                                       |    ❌  |
-| Firefox  | ✅☢️ Trackpad detection can be inaccurate |    ❌  |
+| Firefox  | ✅☢️ Trackpad detection could be inaccurate |    ❌  |
 | Safari   | ✅ Not as accurate as Chromium           |    ❌  |
 | Opera    | ✅                                       |    ❌  |
 | Edge     | ✅                                       |    ❌  |
