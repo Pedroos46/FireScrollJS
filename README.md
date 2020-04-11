@@ -49,7 +49,7 @@ Can also be used in selected elements.
 |          | Desktop                        | Mobile |
 |----------|--------------------------------|--------|
 | Chrome   | ✅                             |    ❌  |
-| Firefox  | ☢️ Deficient support           |    ❌  |
+| Firefox  | ✅☢️ Deficient detection for trakpad       |    ❌  |
 | Safari   | ✅ Not as accurate as Chromium |    ❌  |
 | Opera    | ✅                             |    ❌  |
 | Edge     | ✅                             |    ❌  |

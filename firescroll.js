@@ -49,13 +49,13 @@
 
 
                 //IF MOUSE: X never change. Y change. Y has a changer decimal number.
-                if ((Xequal) && !(Yequal) && !(YdecimaEqual)) {
+                if ((Xequal) && !(Yequal) && (!(YdecimaEqual) || (navigator.userAgent.indexOf("Firefox") > -1) )) {
                     params.state = Mouse;
                     return;
                 }
 
                 //IF TRACKPAD: X and Y changes. Y can carry some decimal numbers that never change.
-                if (!(Xequal) && !(Yequal) && (YdecimaEqual)) {
+                if (!(Xequal) && !(Yequal) && ( (YdecimaEqual) || (navigator.userAgent.indexOf("Firefox") > -1) )) {
                     params.state = TrackpPad;
                     return;
                 }
