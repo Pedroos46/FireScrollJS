@@ -46,12 +46,12 @@ Can also be used in selected elements.
 
 ### Browser Support: 
 
-|          | Desktop                        | Mobile |
-|----------|--------------------------------|--------|
-| Chrome   | ✅                             |    ❌  |
-| Firefox  | ✅☢️ Deficient detection for trakpad       |    ❌  |
-| Safari   | ✅ Not as accurate as Chromium |    ❌  |
-| Opera    | ✅                             |    ❌  |
-| Edge     | ✅                             |    ❌  |
-| Chromium | ✅                             |    ❌  |
+|          | Desktop                                  | Mobile |
+|----------|------------------------------------------|--------|
+| Chrome   | ✅                                       |    ❌  |
+| Firefox  | ✅☢️ Trackpad detection can be inaccurate |    ❌  |
+| Safari   | ✅ Not as accurate as Chromium           |    ❌  |
+| Opera    | ✅                                       |    ❌  |
+| Edge     | ✅                                       |    ❌  |
+| Chromium | ✅                                       |    ❌  |
 
