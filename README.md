@@ -37,11 +37,11 @@ Can also be used in selected elements.
 |--|--|
 | [onwheel Event](https://developer.mozilla.org/es/docs/Web/API/Element/wheel_event) | ✅ |
 | [WheelEvent](https://developer.mozilla.org/es/docs/Web/API/WheelEvent) | ✅ |
-| MouseWheelEvent | ❌ Non-Standard & Deprecated |
-| MouseScrollEvent | ❌ Non-Standard & Deprecated |
+| MouseWheelEvent | ❌  Deprecated |
+| MouseScrollEvent | ❌ Deprecated |
 | onmousewheel Event | ❌ Non-Standard |
 | onsroll | ❌ |
-| DOMMouseScroll | ❌ Non-Standard & Deprecated
+| DOMMouseScroll | ❌ Deprecated
 
 
 ### Browser Support: 
@@ -49,8 +49,8 @@ Can also be used in selected elements.
 |          | Desktop                                    | Mobile |
 |----------|--------------------------------------------|--------|
 | Chrome   | ✅                                         |    ❌  |
-| Firefox  | ✅☢️ Trackpad detection could be inaccurate |    ❌  |
-| Safari   | ✅ Not as accurate as Chromium             |    ❌  |
+| Firefox  | ✅ ☢️ Trackpad detection could be inaccurate|    ❌  |
+| Safari   | ✅                                         |    ❌  |
 | Opera    | ✅                                         |    ❌  |
 | Edge     | ✅                                         |    ❌  |
 | Chromium | ✅                                         |    ❌  |
